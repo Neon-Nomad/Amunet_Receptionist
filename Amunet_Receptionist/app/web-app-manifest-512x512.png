@@ -1,0 +1,5 @@
+Use the provided script to generate placeholders:
+
+Bash
+
+chmod +x scripts/generate-placeholders.sh

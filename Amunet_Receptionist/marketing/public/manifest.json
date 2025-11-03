@@ -1,0 +1,43 @@
+{
+  "name": "Amunet AI",
+  "short_name": "Amunet",
+  "description": "Ancient Intelligence for Modern Business",
+  "theme_color": "#9D00FF",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+This marketing site includes:
+
+✅ Complete Vite + React + Tailwind setup
+✅ Dark theme with #9D00FF primary color
+✅ Orbitron + Nunito Sans fonts
+✅ Auto-playing hero video & background audio
+✅ Parallax effects with framer-motion
+✅ 72-hour offer timer with localStorage
+✅ Functional chat widget
+✅ Contact form with backend integration
+✅ Responsive design for all devices
+✅ SEO optimized with meta tags
+✅ PWA ready with manifest
+
+To run:
+
+Bash
+
+cd marketing
+npm install
+npm run dev
+The site will connect to your existing backend API for chat, contact forms, and user authentication. All the Egyptian mystique + futuristic intelligence aesthetic is implemented with proper animations and interactions.

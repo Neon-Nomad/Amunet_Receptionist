@@ -1,0 +1,54 @@
+{
+  "name": "Amunet AI",
+  "short_name": "Amunet",
+  "description": "Intelligent Business Automation Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#9D00FF",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+Placeholder Assets Setup Script
+Create app/scripts/generate-placeholders.sh:
+
+Bash
+
+#!/bin/bash
+
+# Generate placeholder images using ImageMagick (install first: brew install imagemagick)
+
+PUBLIC_DIR="public"
+
+# Logo
+convert -size 400x100 xc:transparent \
+  -font Arial-Bold -pointsize 48 -fill "#9D00FF" \
+  -gravity center -annotate +0+0 "AMUNET" \
+  "$PUBLIC_DIR/images/amunet_logo_master.png"
+
+# Favicon
+convert -size 96x96 xc:"#9D00FF" \
+  -font Arial-Bold -pointsize 48 -fill white \
+  -gravity center -annotate +0+0 "A" \
+  "$PUBLIC_DIR/favicon-96x96.png"
+
+# Apple Touch Icon
+convert "$PUBLIC_DIR/favicon-96x96.png" -resize 180x180 "$PUBLIC_DIR/apple-touch-icon.png"
+
+# Manifest Icons
+convert "$PUBLIC_DIR/favicon-96x96.png" -resize 192x192 "$PUBLIC_DIR/web-app-manifest-192x192.png"
+convert "$PUBLIC_DIR/favicon-96x96.png" -resize 512x512 "$PUBLIC_DIR/web-app-manifest-512x512.png"
+
+echo "✓ Placeholder assets generated!"

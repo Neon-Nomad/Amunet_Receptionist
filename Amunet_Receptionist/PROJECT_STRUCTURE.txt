@@ -1,0 +1,61 @@
+.
+├── DEPLOYMENT_GUIDE.md
+├── PROJECT_STRUCTURE.txt
+├── README.md
+├── app
+│   ├── README.md
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   └── manifest.json
+│   ├── scripts
+│   │   └── generate-placeholders.sh
+│   ├── src
+│   │   ├── App.tsx
+│   │   ├── components
+│   │   ├── context
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   ├── services
+│   │   └── utils
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   ├── vercel.json
+│   ├── vite.config.ts
+│   └── web-app-manifest-512x512.png
+├── backend
+│   ├── README.md
+│   ├── cloudbuild.yaml
+│   ├── package.json
+│   ├── src
+│   │   ├── controllers
+│   │   ├── db
+│   │   ├── middleware
+│   │   ├── routes
+│   │   ├── server.ts
+│   │   ├── services
+│   │   └── utils
+│   └── tsconfig.json
+└── marketing
+    ├── index.html
+    ├── message.isUser
+    ├── package.json
+    ├── plan.popular
+    ├── public
+    │   └── manifest.json
+    ├── src
+    │   ├── App.tsx
+    │   ├── components
+    │   ├── hooks
+    │   ├── index.css
+    │   ├── main.tsx
+    │   └── pages
+    ├── tailwind.config.js
+    ├── vercel.json
+    └── vite.config.ts
+
+24 directories, 34 files

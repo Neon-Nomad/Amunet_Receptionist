@@ -1,0 +1,46 @@
+{
+  "name": "amunet-backend",
+  "version": "1.0.0",
+  "description": "Amunet AI Backend - Node + Express + Knex + Postgres",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate:latest": "knex migrate:latest --knexfile src/db/knexfile.ts",
+    "migrate:rollback": "knex migrate:rollback --knexfile src/db/knexfile.ts",
+    "migrate:make": "knex migrate:make --knexfile src/db/knexfile.ts",
+    "seed:run": "knex seed:run --knexfile src/db/knexfile.ts",
+    "db:reset": "npm run migrate:rollback && npm run migrate:latest && npm run seed:run"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1",
+    "@sendgrid/mail": "^8.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.11.3",
+    "stripe": "^14.10.0",
+    "twilio": "^4.20.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.10.6",
+    "@types/pg": "^8.10.9",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

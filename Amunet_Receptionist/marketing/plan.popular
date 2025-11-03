@@ -1,0 +1,88 @@
+? 'bg-primary-500 hover:bg-primary-600 text-white'
+                      : 'border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
+              )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* FAQ Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-24"
+        >
+          <h2 className="font-orbitron font-bold text-3xl md:text-4xl text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                question: "What's included in the setup fee waiver?",
+                answer: "Normally $2,500, we'll waive the entire setup fee if you start within 72 hours. This includes full system configuration, data migration, AI training, and dedicated onboarding support."
+              },
+              {
+                question: "Can I change plans later?",
+                answer: "Absolutely. You can upgrade or downgrade at any time. Changes take effect on your next billing cycle, and we'll prorate any differences."
+              },
+              {
+                question: "What integrations are included?",
+                answer: "We integrate with 100+ platforms including your existing CRM, email marketing, social media, phone systems, and more. Custom integrations available on Growth and Elite plans."
+              },
+              {
+                question: "Is there a contract?",
+                answer: "No long-term contracts required. All plans are month-to-month, though we offer discounts for annual commitments."
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="glass p-6 rounded-lg"
+              >
+                <h3 className="font-orbitron font-semibold text-lg mb-3 text-white">
+                  {faq.question}
+                </h3>
+                <p className="text-white/70 font-nunito">
+                  {faq.answer}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <h3 className="font-orbitron font-bold text-2xl mb-4 text-white">
+            Still have questions?
+          </h3>
+          <p className="text-white/70 mb-6 font-nunito">
+            Our team is here to help you choose the perfect plan for your business.
+          </p>
+          <a
+            href="mailto:sales@amunet.ai"
+            className="btn-primary"
+          >
+            Talk to Sales Team
+          </a>
+        </motion.div>
+      </div>
+    </div>
+  )
+}
+
+export default Pricing
