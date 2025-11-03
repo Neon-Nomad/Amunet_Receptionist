@@ -31,5 +31,4 @@ steps:
       - '--allow-unauthenticated'
 
 images:
-  - 'gcr.io/$PROJECT_ID/amunet-backend:$COMMIT_SHA'
-  - 'gcr.io/$PROJECT_ID/amunet-backend:latest'
+  - gcr.io/gen-lang-client-0009576076/amunet-receptionist-backend:latest
